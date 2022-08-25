@@ -79,15 +79,15 @@ Load TensorFlow lite model with interpreter interface.
 
 # Load TFLite model and see some details about input/output
 from __future__ import absolute_import, division, print_function, unicode_literals
-!wget https://s3.eu-central-1.amazonaws.com/lms-lyon.fr/modelSavedOptimized.tar
-!tar -xvf "/content/modelSavedOptimized.tar" -C "/content/"  
+#!wget https://s3.eu-central-1.amazonaws.com/lms-lyon.fr/modelSavedOptimized.tar
+#!tar -xvf "/content/modelSavedOptimized.tar" -C "/content/"  
 import matplotlib.pylab as plt
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 
 
-tflite_interpreter = tf.lite.Interpreter(model_path="/content/modelSavedOptimized.tflite")
+tflite_interpreter = tf.lite.Interpreter(model_path="modelSavedOptimized.tflite")
 tflite_interpreter.allocate_tensors()
 
 input_details = tflite_interpreter.get_input_details()
