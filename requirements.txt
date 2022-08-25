@@ -111,8 +111,6 @@ gspread-dataframe==3.0.8
 gym==0.25.1
 gym-notices==0.0.8
 h11==0.13.0
-h5py==3.1.0
-HeapDict==1.0.1
 hijri-converter==2.2.4
 holidays==0.14.2
 holoviews==1.14.9
@@ -341,7 +339,7 @@ tenacity==8.0.1
 tensorboard==2.8.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-tensorflow==2.8.2+zzzcolab20220719082949
+tensorflow==2.8.2
 tensorflow-datasets==4.6.0
 tensorflow-estimator==2.8.0
 tensorflow-gcs-config==2.8.0
