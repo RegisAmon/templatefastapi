@@ -52,16 +52,16 @@ warnings.filterwarnings("ignore")
 
 
 
-from __future__ import absolute_import, division, print_function, unicode_literals
+#from __future__ import absolute_import, division, print_function, unicode_literals
 
-import matplotlib.pylab as plt
+#import matplotlib.pylab as plt
 import tensorflow as tf
 #import tensorflow_hub as hub
 import numpy as np
 
 """For better data visualization we'll use [Pandas library](https://pandas.pydata.org/)."""
 
-import pandas as pd
+#import pandas as pd
 
 # Increase precision of presented data for better side-by-side comparison
 pd.set_option("display.precision", 8)
@@ -78,12 +78,12 @@ Load TensorFlow lite model with interpreter interface.
 
 
 # Load TFLite model and see some details about input/output
-from __future__ import absolute_import, division, print_function, unicode_literals
+#from __future__ import absolute_import, division, print_function, unicode_literals
 #!wget https://s3.eu-central-1.amazonaws.com/lms-lyon.fr/modelSavedOptimized.tar
 #!tar -xvf "/content/modelSavedOptimized.tar" -C "/content/"  
 import matplotlib.pylab as plt
 import tensorflow as tf
-import tensorflow_hub as hub
+#import tensorflow_hub as hub
 import numpy as np
 
 
