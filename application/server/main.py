@@ -267,3 +267,6 @@ def mainfight(url):
  
         return {'label': res }
 
+
+if __name__ == "__main__":
+    uvicorn.run(app, debug=True)
