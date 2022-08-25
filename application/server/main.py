@@ -64,7 +64,7 @@ import numpy as np
 #import pandas as pd
 
 # Increase precision of presented data for better side-by-side comparison
-pd.set_option("display.precision", 8)
+#pd.set_option("display.precision", 8)
 
 print("Version: ", tf.__version__)
 print("Hub version: ", hub.__version__)
