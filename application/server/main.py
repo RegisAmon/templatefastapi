@@ -44,9 +44,9 @@ from pathlib import Path
 #from utils import plot
 from fastapi import FastAPI, File, UploadFile
 
-import torch
-import warnings
-warnings.filterwarnings("ignore")
+#import torch
+#import warnings
+#warnings.filterwarnings("ignore")
 
 """# Initilisation API"""
 
