@@ -66,10 +66,6 @@ import numpy as np
 # Increase precision of presented data for better side-by-side comparison
 #pd.set_option("display.precision", 8)
 
-print("Version: ", tf.__version__)
-print("Hub version: ", hub.__version__)
-print("Eager mode: ", tf.executing_eagerly())
-print("GPU is", "available" if tf.test.is_gpu_available() else "NOT AVAILABLE")
 
 """# Load TFLite model
 
@@ -81,7 +77,7 @@ Load TensorFlow lite model with interpreter interface.
 #from __future__ import absolute_import, division, print_function, unicode_literals
 #!wget https://s3.eu-central-1.amazonaws.com/lms-lyon.fr/modelSavedOptimized.tar
 #!tar -xvf "/content/modelSavedOptimized.tar" -C "/content/"  
-import matplotlib.pylab as plt
+#import matplotlib.pylab as plt
 import tensorflow as tf
 #import tensorflow_hub as hub
 import numpy as np
@@ -146,38 +142,17 @@ def video_mamonreader(cv2,filename):
 
 def pred_fight(video,acuracy=0.85):
   ysvid2 = video_mamonreader(cv2,video)
-
   ysdatav2 = np.zeros((1, 30, 160, 160, 3), dtype=np.float32)
-
   ysdatav2[0][:][:] = ysvid2
-  #print(ysvid2.shape)
-
   tflite_interpreter.set_tensor(input_details[0]['index'], ysdatav2)
-
-
-  #val_image_batch = np.zeros((30, 160, 160, 3), dtype=np.float)
-  #tflite_interpreter.set_tensor(input_details[0]['index'], val_image_batch)
-
   tflite_interpreter.invoke()
-
-  tflite_model_predictions = tflite_interpreter.get_tensor(output_details[0]['index'])
-    
+  tflite_model_predictions = tflite_interpreter.get_tensor(output_details[0]['index'])    
     
   if tflite_model_predictions[0][1] >=acuracy:
       return True , tflite_model_predictions[0][1]
   else:
       return False , tflite_model_predictions[0][1]
 
-#
-
-import time
-
-millis = int(round(time.time() * 1000))
-print("started at " , millis)
-predaction = pred_fight(video="fight2.mp4",acuracy=0.9)
-print(predaction)
-millis2 = int(round(time.time() * 1000))
-print("time processing " , millis2 - millis)
 
 def main_fight(vidoss):
     import time
