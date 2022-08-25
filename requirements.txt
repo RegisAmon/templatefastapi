@@ -5,5 +5,4 @@ python-multipart==0.0.5
 tensorflow-cpu==2.8.2
 uvicorn==0.13.1
 opencv-python-headless==4.6.0.66
-pycocotools==2.0.0
 gensim==3.5.0
